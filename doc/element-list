@@ -1,0 +1,6 @@
+com.trax
+com.trax.controller
+com.trax.entities
+com.trax.repositories
+com.trax.services
+com.trax.utils

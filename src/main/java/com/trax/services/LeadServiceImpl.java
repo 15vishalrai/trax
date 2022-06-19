@@ -1,0 +1,45 @@
+package com.trax.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.trax.entities.Lead;
+import com.trax.repositories.LeadRepository;
+
+@Service
+public class LeadServiceImpl implements LeadService {
+
+	@Autowired
+	private LeadRepository leadRepo;
+	
+	@Override
+	public void saveLeadInfo(Lead lead) throws RuntimeException {
+		leadRepo.save(lead);
+		//throws keyword will return the control back to calling statement
+
+	}
+
+	@Override
+	public Lead findLeadById(long id) {
+		Optional<Lead> findById = leadRepo.findById(id);
+		Lead lead = findById.get();
+		return lead;
+		
+	}
+
+	@Override
+	public void deleteLeadById(long id) {
+		leadRepo.deleteById(id);
+		
+	}
+
+	@Override
+	public List<Lead> getallLeads() {
+		List<Lead> leads = leadRepo.findAll();
+		return leads;
+	}
+
+}

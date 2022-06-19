@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.trax"},{"l":"com.trax.controller"},{"l":"com.trax.entities"},{"l":"com.trax.repositories"},{"l":"com.trax.services"},{"l":"com.trax.utils"}];updateSearchResults();
